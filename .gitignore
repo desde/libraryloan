@@ -1,0 +1,21 @@
+# Symfony
+api/var/
+api/vendor/
+
+# dotenv
+api/.env.local
+api/.env.test.local
+
+# PHPUnit
+api/.phpunit.result.cache
+
+# Docker volumes
+docker/database/data
+docker/mysql/data
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
