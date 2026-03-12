@@ -77,7 +77,7 @@ This will start:
 Enter the PHP container:
 
 ```bash
-docker exec -it php_container bash
+docker compose exec php bash
 ```
 
 Then install dependencies:
@@ -118,7 +118,7 @@ API Platform automatically provides documentation.
 Open in your browser:
 
 ```bash
-http://localhost/api
+http://localhost:8080/api
 ```
 
 ---
@@ -175,8 +175,8 @@ Example body:
 
 ```json
 {
-  "loanDate": "2025-01-01",
-  "user": "/api/users/1",
+  "loanDate": "2026-01-01",
+  "client": "/api/users/1",
   "book": "/api/books/1"
 }
 ```
@@ -205,12 +205,16 @@ Example response:
 
 # Loan Report Endpoint
 
-A custom endpoint was implemented to generate a loan report.
+A custom endpoint was implemented on API PLATFORM to generate a loan report.
 
 GET
 
 ```
-/loans/report
+/api/report
+```
+```
+startDate: 2024-01-01
+endDate: 2027-01-01
 ```
 
 This endpoint returns aggregated loan data.
@@ -319,3 +323,4 @@ api/
 docker-compose.yml
 docker/
 README.md
+
